@@ -1,7 +1,11 @@
 version: '3'
 services:
   nextjs-gestion:
-    image: nextjs-gestion:latest # Puedes cambiar esto a la imagen de Docker que estés usando
+    build:
+      context: .
+      dockerfile: Dockerfile
+    # En este caso no uso imagen
+    # image: nextjs-gestion:latest # Puedes cambiar esto a la imagen de Docker que estés usando
     ports:
       - "3000:3000"
     expose:
